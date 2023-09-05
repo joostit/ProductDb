@@ -22,7 +22,7 @@ public class ScanApiController {
     }
 
     @GetMapping("/{ean}")
-    public ResponseEntity<ProductApiResponse> findUserById(@PathVariable(value = "ean") String ean) {
+    public ResponseEntity<ProductApiResponse> findProductByEan(@PathVariable(value = "ean") String ean) {
 
         BarcodeResponse foundProduct = scanService.GetBarcodeResponse(ean);
 
