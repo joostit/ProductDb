@@ -30,7 +30,7 @@ public class ScanApiController {
             return ResponseBuilder.ok("product", foundProduct, "Product found");
         }
         else{
-            return ResponseBuilder.notFond("Product not found");
+            return ResponseBuilder.notFound("Product not found", "The product EAN was not present in the product Database");
         }
 
 

@@ -11,16 +11,21 @@ import static org.springframework.http.HttpStatus.OK;
 
 public class ResponseBuilder {
 
-
-    public static ResponseEntity<ProductApiResponse> notFond(String message){
+    public static ResponseEntity<ProductApiResponse> notFound(String message, String developerMessage, String reason) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
                 ProductApiResponse.builder()
                         .timestamp(now())
                         .message(message)
+                        .developerMessage(developerMessage)
+                        .reason(reason)
                         .status(NOT_FOUND)
                         .statusCode(NOT_FOUND.value())
                         .build()
         );
+    }
+
+    public static ResponseEntity<ProductApiResponse> notFound(String message, String reason){
+        return ResponseBuilder.notFound(message,null, reason);
     }
 
 

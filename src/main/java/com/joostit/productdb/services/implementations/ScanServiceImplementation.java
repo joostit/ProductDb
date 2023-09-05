@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScanServiceImplementation implements ScanService {
 
-
-
     private final ProductRepository productRepo;
 
     public ScanServiceImplementation(ProductRepository pRepo){

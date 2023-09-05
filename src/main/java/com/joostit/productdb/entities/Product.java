@@ -26,5 +26,4 @@ public class Product {
     @Setter
     private int price;
 
-
 }
